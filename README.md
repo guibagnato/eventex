@@ -1,5 +1,7 @@
 # Welcome to the Django
 
+[![Build Status](https://travis-ci.org/guibagnato/eventex.svg?branch=master)](https://travis-ci.org/guibagnato/eventex)
+
 ## Como desenvolver ?
 
 1. Clone o repositório

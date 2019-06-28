@@ -1,5 +1,6 @@
 # Welcome to the Django
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/77ea81cc53cb46ef99d678e810675605)](https://app.codacy.com/app/guibagnato/eventex?utm_source=github.com&utm_medium=referral&utm_content=guibagnato/eventex&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/guibagnato/eventex.svg?branch=master)](https://travis-ci.org/guibagnato/eventex)
 
 ## Como desenvolver ?

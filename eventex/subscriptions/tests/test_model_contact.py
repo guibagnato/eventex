@@ -42,3 +42,25 @@ class ContactModelTest(TestCase):
             value='gui.bagnato@gmail.com',
         )
         self.assertEqual('gui.bagnato@gmail.com', str(contact))
+
+
+class ContactManagerTest(TestCase):
+    def setUp(self):
+        s = Speaker.objects.create(
+            name='Guilherme Bagnato',
+            slug='guilherme-bagnato',
+            photo='http://hbn.link/hb-pic'
+        )
+
+        s.contact_set.create(kind=Contact.EMAIL, value='gui.bagnato@gmail.com')
+        s.contact_set.create(kind=Contact.PHONE, value='11123456789')
+
+    def test_mails(self):
+        qs = Contact.objects.emails()
+        expected = ['gui.bagnato@gmail.com']
+        self.assertQuerysetEqual(qs, expected, lambda o: o.value)
+
+    def test_phones(self):
+        qs = Contact.objects.phones()
+        expected = ['11123456789']
+        self.assertQuerysetEqual(qs, expected, lambda o: o.value)
